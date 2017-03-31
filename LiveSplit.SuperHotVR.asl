@@ -6,7 +6,7 @@ state("superhot")
 
 start
 {
-	return (old.ammo < 10 && current.ammo < old.ammo);
+	return (old.ammo < 5 && current.ammo < old.ammo);
 }
 
 split
