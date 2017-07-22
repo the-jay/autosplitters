@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="24">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>6</ID>
+      <Description>"START"</Description>
+      <LastState RealAddress="010F0FD0"/>
+      <VariableType>String</VariableType>
+      <Length>16</Length>
+      <Unicode>0</Unicode>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>TheEndIsNigh.exe+260FD0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8</ID>
+      <Description>"FrameCount"</Description>
+      <LastState Value="120254" RealAddress="010F0FE0"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>TheEndIsNigh.exe+260FE0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>7</ID>
+      <Description>"DeathCount"</Description>
+      <LastState Value="81" RealAddress="010F0FE8"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>TheEndIsNigh.exe+260FE8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"World_x"</Description>
+      <LastState Value="0" RealAddress="010F0FEC"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>TheEndIsNigh.exe+260FEC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>9</ID>
+      <Description>"World_y"</Description>
+      <LastState Value="26" RealAddress="010F0FF0"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>TheEndIsNigh.exe+260FF0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"Tumor"</Description>
+      <LastState Value="7" RealAddress="010F0FF4"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>TheEndIsNigh.exe+260FF4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"Level"</Description>
+      <LastState Value="17478296" RealAddress="010FFC20"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>TheEndIsNigh.exe+26FC20</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"Cartridge"</Description>
+      <LastState Value="0" RealAddress="010F0FF8"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>TheEndIsNigh.exe+260FF8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"Body"</Description>
+      <LastState Value="1" RealAddress="010F0FFC"/>
+      <VariableType>Byte</VariableType>
+      <Address>TheEndIsNigh.exe+260FFC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>12</ID>
+      <Description>"Heart"</Description>
+      <LastState Value="1" RealAddress="010F0FFD"/>
+      <VariableType>Byte</VariableType>
+      <Address>TheEndIsNigh.exe+260FFD</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>13</ID>
+      <Description>"Head"</Description>
+      <LastState Value="1" RealAddress="010F0FFE"/>
+      <VariableType>Byte</VariableType>
+      <Address>TheEndIsNigh.exe+260FFE</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>14</ID>
+      <Description>"Friend"</Description>
+      <LastState Value="1" RealAddress="010F1000"/>
+      <VariableType>Byte</VariableType>
+      <Address>TheEndIsNigh.exe+261000</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>15</ID>
+      <Description>"Escape"</Description>
+      <LastState Value="0" RealAddress="010F1001"/>
+      <VariableType>Byte</VariableType>
+      <Address>TheEndIsNigh.exe+261001</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>16</ID>
+      <Description>"TheEnd"</Description>
+      <LastState Value="0" RealAddress="010F1002"/>
+      <VariableType>Byte</VariableType>
+      <Address>TheEndIsNigh.exe+261002</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>17</ID>
+      <Description>"TrueEnd"</Description>
+      <LastState Value="0" RealAddress="010F1003"/>
+      <VariableType>Byte</VariableType>
+      <Address>TheEndIsNigh.exe+261003</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>18</ID>
+      <Description>"FileSelect"</Description>
+      <LastState Value="1" RealAddress="010F1004"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>TheEndIsNigh.exe+261004</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>19</ID>
+      <Description>"No description"</Description>
+      <LastState RealAddress="010F0FD0"/>
+      <VariableType>String</VariableType>
+      <Length>16</Length>
+      <Unicode>0</Unicode>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>TheEndIsNigh.exe+260FD0</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
