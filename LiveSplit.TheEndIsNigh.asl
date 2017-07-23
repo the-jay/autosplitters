@@ -1,6 +1,6 @@
 state("TheEndIsNigh")
 {
-	string16 start : "TheEndIsNigh.exe", 0x260FD0;
+	string16 start : "TheEndIsNigh.exe", 0x260FD0; //LookHereInMemory
 	byte InGameTime : "TheEndIsNigh.exe", 0x260FE0;
 	byte DeathCount : "TheEndIsNigh.exe", 0x260FE8;
 	byte WorldGridX : "TheEndIsNigh.exe", 0x260FEC;
@@ -17,12 +17,19 @@ state("TheEndIsNigh")
 	byte BeatEnd2 : "TheEndIsNigh.exe", 0x261003;
 	byte FileSelect : "TheEndIsNigh.exe", 0x261004;
 }
-
+startup
+{
+	settings.Add("skip_parts", false, "Skip the last body part");
+	settings.Add("skipbody", false, "Body", "skip_parts");
+	settings.Add("skipheart", false, "Heart", "skip_parts");
+	settings.Add("skiphead", false, "Head", "skip_parts");
+}
 
 start
 {
 	return (current.FileSelect > old.FileSelect);
 }
+
 
 split
 {
@@ -36,9 +43,9 @@ split
 	(current.WorldGridX == 20 && current.WorldGridY == 26 && old.WorldGridX == 19 && old.WorldGridY == 26)||
 	(current.WorldGridX == 40 && current.WorldGridY == 26 && old.WorldGridX == 39 && old.WorldGridY == 26)||
 	(current.WorldGridX == 60 && current.WorldGridY == 30 && old.WorldGridX == 60 && old.WorldGridY == 29)||
-	(current.Body > old.Body)||
-	(current.Heart > old.Heart)||
-	(current.Head > old.Head)||
+	(current.Body > old.Body && !settings["skipbody"])||
+	(current.Heart > old.Heart && !settings["skipheart"])||
+	(current.Head > old.Head && !settings["skiphead"])||
 	(current.AssembledFriend > old.AssembledFriend)||
 	(current.Escaping > old.Escaping)||
 	(current.BeatEnd1 > old.BeatEnd1)||
