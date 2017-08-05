@@ -1,7 +1,7 @@
 state("TheEndIsNigh")
 {
 	string16 start : "TheEndIsNigh.exe", 0x260FD0; //LookHereInMemory
-	byte InGameTime : "TheEndIsNigh.exe", 0x260FE0;
+	long InGameTime : "TheEndIsNigh.exe", 0x260FE0;
 	byte DeathCount : "TheEndIsNigh.exe", 0x260FE8;
 	byte WorldGridX : "TheEndIsNigh.exe", 0x260FEC;
 	byte WorldGridY : "TheEndIsNigh.exe", 0x260FF0;
@@ -16,20 +16,26 @@ state("TheEndIsNigh")
 	byte BeatEnd1 : "TheEndIsNigh.exe", 0x261002;
 	byte BeatEnd2 : "TheEndIsNigh.exe", 0x261003;
 	byte FileSelect : "TheEndIsNigh.exe", 0x261004;
+	long RawFrames : "TheEndIsNigh.exe", 0x261008;
 }
 startup
 {
 	settings.Add("skip_parts", false, "Skip the last body part");
-	settings.Add("skipbody", false, "Body", "skip_parts");
-	settings.Add("skipheart", false, "Heart", "skip_parts");
-	settings.Add("skiphead", false, "Head", "skip_parts");
+	settings.Add("skipbody", false, "Body (Golgotha)", "skip_parts");
+	settings.Add("skipheart", false, "Heart (Machine)", "skip_parts");
+	settings.Add("skiphead", false, "Head (Exodus)", "skip_parts");
 }
 
 start
 {
-	return (current.FileSelect > old.FileSelect);
+	vars.startTime = TimeSpan.FromSeconds(current.RawFrames / 60f);
+	return (current.FileSelect > old.FileSelect && current.InGameTime == 0);
 }
 
+gameTime
+{
+	return TimeSpan.FromSeconds(current.RawFrames / 60f) - vars.startTime;
+}
 
 split
 {
@@ -42,7 +48,7 @@ split
 	(current.WorldGridX == 71 && current.WorldGridY == 23 && old.WorldGridX == 71 && old.WorldGridY == 22)||
 	(current.WorldGridX == 20 && current.WorldGridY == 26 && old.WorldGridX == 19 && old.WorldGridY == 26)||
 	(current.WorldGridX == 40 && current.WorldGridY == 26 && old.WorldGridX == 39 && old.WorldGridY == 26)||
-	(current.WorldGridX == 60 && current.WorldGridY == 30 && old.WorldGridX == 60 && old.WorldGridY == 29)||
+	(current.WorldGridX == 60 && current.WorldGridY == 30 && old.WorldGridX == 60 && old.WorldGridY == 28)||
 	(current.Body > old.Body && !settings["skipbody"])||
 	(current.Heart > old.Heart && !settings["skipheart"])||
 	(current.Head > old.Head && !settings["skiphead"])||
@@ -50,4 +56,10 @@ split
 	(current.Escaping > old.Escaping)||
 	(current.BeatEnd1 > old.BeatEnd1)||
 	(current.BeatEnd2 > old.BeatEnd2);
+}
+
+reset
+{
+	return
+	(current.CartridgeCount > 5); //Turn off timer for main savefile
 }
