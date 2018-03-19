@@ -1,6 +1,6 @@
 state("SUPERHOTVR")
 {
-	byte level : "WINHTTP.dll", 0x00099C3C; // Level parameter goes up when next level loads
+	byte level : "SUPERHOTVR.exe", 0x00F79018; // Level parameter goes up when next level loads
 	byte enemy : "SUPERHOTVR.exe", 0x0100A080, 0x30; // Enemy Count
 }
 startup
