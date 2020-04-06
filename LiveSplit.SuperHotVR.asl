@@ -18,7 +18,7 @@ start
 split
 {
 	return
-	(current.level > old.level);
+	(current.level > old.level) && !current.loading;
 }
 isLoading
 {
