@@ -1,6 +1,6 @@
 state("SUPERHOTVR")
 {	
-	byte level : "SUPERHOTVR.exe", 0x014314F8, 0x98, 0x38, 0x30, 0x4BC; // Level parameter goes up when next level loads
+	byte level : "SUPERHOTVR.exe", 0x01327C40, 0x278; // Level parameter goes up when next level loads
 	byte enemy : "SUPERHOTVR.exe", 0x01427140, 0x38; // Enemy Count
 	bool loading : "SUPERHOTVR.exe", 0x0132BA50, 0x28, 0x168; // isLoading
 }
